@@ -14,6 +14,9 @@
 		CAD973642C80D1C800B928B3 /* TestingMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD973632C80D1C800B928B3 /* TestingMVVMTests.swift */; };
 		CAD9736E2C80D1C800B928B3 /* TestingMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9736D2C80D1C800B928B3 /* TestingMVVMUITests.swift */; };
 		CAD973702C80D1C800B928B3 /* TestingMVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9736F2C80D1C800B928B3 /* TestingMVVMUITestsLaunchTests.swift */; };
+		CAD9737D2C80DE2600B928B3 /* UsingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9737C2C80DE2600B928B3 /* UsingState.swift */; };
+		CAD9737F2C80DEC800B928B3 /* UsingObserved.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9737E2C80DEC800B928B3 /* UsingObserved.swift */; };
+		CAD973832C80E47E00B928B3 /* AnotherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD973822C80E47E00B928B3 /* AnotherTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		CAD973692C80D1C800B928B3 /* TestingMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD9736D2C80D1C800B928B3 /* TestingMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingMVVMUITests.swift; sourceTree = "<group>"; };
 		CAD9736F2C80D1C800B928B3 /* TestingMVVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingMVVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CAD9737C2C80DE2600B928B3 /* UsingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingState.swift; sourceTree = "<group>"; };
+		CAD9737E2C80DEC800B928B3 /* UsingObserved.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingObserved.swift; sourceTree = "<group>"; };
+		CAD973822C80E47E00B928B3 /* AnotherTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,9 @@
 			children = (
 				CAD973502C80D1C400B928B3 /* TestingMVVMApp.swift */,
 				CAD973522C80D1C400B928B3 /* ContentView.swift */,
+				CAD973822C80E47E00B928B3 /* AnotherTest.swift */,
+				CAD9737C2C80DE2600B928B3 /* UsingState.swift */,
+				CAD9737E2C80DEC800B928B3 /* UsingObserved.swift */,
 				CAD973562C80D1C700B928B3 /* Assets.xcassets */,
 				CAD973582C80D1C700B928B3 /* Preview Content */,
 			);
@@ -257,7 +266,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAD973832C80E47E00B928B3 /* AnotherTest.swift in Sources */,
 				CAD973532C80D1C400B928B3 /* ContentView.swift in Sources */,
+				CAD9737D2C80DE2600B928B3 /* UsingState.swift in Sources */,
+				CAD9737F2C80DEC800B928B3 /* UsingObserved.swift in Sources */,
 				CAD973512C80D1C400B928B3 /* TestingMVVMApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

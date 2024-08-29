@@ -8,8 +8,8 @@
 import SwiftUI
 
 // MARK: - Model
-class GameModel {
-    var playerScore: Int
+class GameModel : ObservableObject {
+    @Published var playerScore: Int
     var highScore: Int
     
     init(playerScore: Int = 0, highScore: Int = 0) {
@@ -32,7 +32,7 @@ class GameModel {
 // MARK: - ViewModel
 class GameViewModel: ObservableObject {
     @Published var showView: ChosenView
-    @Published var model: GameModel
+    @ObservedObject var model: GameModel
     
     init(showView: ChosenView = .mainMenu, model: GameModel = GameModel()) {
         self.showView = showView
