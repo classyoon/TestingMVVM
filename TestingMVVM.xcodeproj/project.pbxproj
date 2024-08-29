@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CAD973512C80D1C400B928B3 /* TestingMVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD973502C80D1C400B928B3 /* TestingMVVMApp.swift */; };
 		CAD973532C80D1C400B928B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD973522C80D1C400B928B3 /* ContentView.swift */; };
-		CAD973552C80D1C400B928B3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD973542C80D1C400B928B3 /* Item.swift */; };
 		CAD973572C80D1C700B928B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD973562C80D1C700B928B3 /* Assets.xcassets */; };
 		CAD9735A2C80D1C700B928B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD973592C80D1C700B928B3 /* Preview Assets.xcassets */; };
 		CAD973642C80D1C800B928B3 /* TestingMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD973632C80D1C800B928B3 /* TestingMVVMTests.swift */; };
@@ -38,7 +37,6 @@
 		CAD9734D2C80D1C400B928B3 /* TestingMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD973502C80D1C400B928B3 /* TestingMVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingMVVMApp.swift; sourceTree = "<group>"; };
 		CAD973522C80D1C400B928B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CAD973542C80D1C400B928B3 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CAD973562C80D1C700B928B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAD973592C80D1C700B928B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CAD9735F2C80D1C800B928B3 /* TestingMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,7 +96,6 @@
 			children = (
 				CAD973502C80D1C400B928B3 /* TestingMVVMApp.swift */,
 				CAD973522C80D1C400B928B3 /* ContentView.swift */,
-				CAD973542C80D1C400B928B3 /* Item.swift */,
 				CAD973562C80D1C700B928B3 /* Assets.xcassets */,
 				CAD973582C80D1C700B928B3 /* Preview Content */,
 			);
@@ -261,7 +258,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAD973532C80D1C400B928B3 /* ContentView.swift in Sources */,
-				CAD973552C80D1C400B928B3 /* Item.swift in Sources */,
 				CAD973512C80D1C400B928B3 /* TestingMVVMApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

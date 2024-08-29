@@ -6,56 +6,76 @@
 //
 
 import SwiftUI
-import SwiftData
+import SwiftUI
 
-struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+// MARK: - ViewModel
+class GameViewModel: ObservableObject {
+    @Published var showView: ChosenView
+    
+    init(showView: ChosenView = .mainMenu) {
+        self.showView = showView
+    }
+    
+    func navigateToPlayView() {
+        showView = .play
+    }
+    
+    func navigateToMenuView() {
+        showView = .mainMenu
+    }
+}
 
+// MARK: - Enum
+enum ChosenView {
+    case mainMenu, play
+}
+
+// MARK: - Views
+struct GameView: View {
+    @StateObject private var viewModel = GameViewModel()
+    
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+        VStack {
+            switch viewModel.showView {
+            case .mainMenu:
+                MenuView(viewModel: viewModel)
+            case .play:
+                PlayView(viewModel: viewModel)
             }
         }
     }
 }
 
+struct MenuView: View {
+    @ObservedObject var viewModel: GameViewModel
+    
+    var body: some View {
+        VStack {
+            Text("Hello world")
+            Button("Wanna play?") {
+                viewModel.navigateToPlayView()
+            }
+        }
+    }
+}
+
+struct PlayView: View {
+    @ObservedObject var viewModel: GameViewModel
+    
+    var body: some View {
+        VStack {
+            Text("This is so fun. Press button to have fun.")
+            Button("Fun") {
+                // Add fun action here
+            }
+            Button("All done?") {
+                viewModel.navigateToMenuView()
+            }
+        }
+    }
+}
+
+// MARK: - Preview
 #Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+    GameView()
 }
