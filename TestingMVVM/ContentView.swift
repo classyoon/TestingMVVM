@@ -5,7 +5,7 @@
 //  Created by Conner Yoon on 8/29/24.
 //
 
-
+import SwiftUI
 import SwiftUI
 
 // MARK: - Model
