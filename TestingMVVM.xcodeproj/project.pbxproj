@@ -17,6 +17,7 @@
 		CAD9737D2C80DE2600B928B3 /* UsingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9737C2C80DE2600B928B3 /* UsingState.swift */; };
 		CAD9737F2C80DEC800B928B3 /* UsingObserved.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD9737E2C80DEC800B928B3 /* UsingObserved.swift */; };
 		CAD973832C80E47E00B928B3 /* AnotherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD973822C80E47E00B928B3 /* AnotherTest.swift */; };
+		CAD973852C828B1400B928B3 /* SimpleObserved.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD973842C828B1400B928B3 /* SimpleObserved.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		CAD9737C2C80DE2600B928B3 /* UsingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingState.swift; sourceTree = "<group>"; };
 		CAD9737E2C80DEC800B928B3 /* UsingObserved.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingObserved.swift; sourceTree = "<group>"; };
 		CAD973822C80E47E00B928B3 /* AnotherTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherTest.swift; sourceTree = "<group>"; };
+		CAD973842C828B1400B928B3 /* SimpleObserved.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleObserved.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				CAD973822C80E47E00B928B3 /* AnotherTest.swift */,
 				CAD9737C2C80DE2600B928B3 /* UsingState.swift */,
 				CAD9737E2C80DEC800B928B3 /* UsingObserved.swift */,
+				CAD973842C828B1400B928B3 /* SimpleObserved.swift */,
 				CAD973562C80D1C700B928B3 /* Assets.xcassets */,
 				CAD973582C80D1C700B928B3 /* Preview Content */,
 			);
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAD973832C80E47E00B928B3 /* AnotherTest.swift in Sources */,
+				CAD973852C828B1400B928B3 /* SimpleObserved.swift in Sources */,
 				CAD973532C80D1C400B928B3 /* ContentView.swift in Sources */,
 				CAD9737D2C80DE2600B928B3 /* UsingState.swift in Sources */,
 				CAD9737F2C80DEC800B928B3 /* UsingObserved.swift in Sources */,

@@ -14,7 +14,7 @@ struct TestingMVVMApp: App {
 
     var body: some Scene {
         WindowGroup {
-            GameView()
+            SimpleView()
         }
     }
 }

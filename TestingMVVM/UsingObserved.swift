@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-
+import Combine
 struct UsingObserved: View {
-    @ObservedObject var tracker : Tracker
+    @ObservedObject var tracker : Model
     var body: some View {
         
         VStack {
@@ -22,33 +22,44 @@ struct UsingObserved: View {
 }
 
 
-class Tracker : ObservableObject {
+class Model : ObservableObject {
     @Published var counter : Int = 0
+    func increaseCounter(){
+        counter+=1
+    }
+    func getNum()-> Int{
+        return counter
+    }
+}
+class ViewModel  : ObservableObject {
+    @Published var model : Model = Model()
+    func increaseCounter(){
+        model.increaseCounter()
+    }
+//    func getText()-> String{
+//        return "\(model.getNum())"
+//    }
+    var counterText : String {
+        "\(model.counter)"
+    }
 }
 
-struct NestedObserved: View {
-    @State var tracker : SecondTracker
+struct SimpleView: View {
+    @StateObject var vm : ViewModel = ViewModel()
     var body: some View {
-        
         VStack {
-            Text("Counter : \(tracker.second.counter)")
-            Button("Test \(tracker.second.counter)"){
-                tracker.second.counter+=1
+            Text("Counter : \(vm.counterText)")
+            Button("Test \(vm.counterText)"){
+                vm.increaseCounter()
+                
             }
         }
     }
 }
-extension NestedObserved {
-    @Observable
-    class SecondTracker  : ObservableObject {
-         var second : Tracker
-        init(second: Tracker = Tracker()) {
-            self.second = second
-        }
-    }
-}
+
+
 #Preview {
 //    UsingObserved(tracker: Tracker())
-   // NestedObserved()
-    Text("Ugh")
+    SimpleView()
+    //Text("Ugh")
 }
