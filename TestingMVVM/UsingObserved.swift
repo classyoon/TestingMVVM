@@ -8,39 +8,35 @@
 import SwiftUI
 
 import Combine
-struct UsingObserved: View {
-    @ObservedObject var tracker : Model
-    var body: some View {
-        
-        VStack {
-            Text("Counter : \(tracker.counter)")
-            Button("Test \(tracker.counter)"){
-                tracker.counter+=1
-            }
-        }
-    }
-}
+//struct UsingObserved: View {
+//    @ObservedObject var tracker : Model
+//    var body: some View {
+//        
+//        VStack {
+//            Text("Counter : \(tracker.counter)")
+//            Button("Test \(tracker.counter)"){
+//                tracker.counter+=1
+//            }
+//        }
+//    }
+//}
 
 
 class Model : ObservableObject {
-    @Published var counter : Int = 0
-    func increaseCounter(){
-        counter+=1
-    }
-    func getNum()-> Int{
-        return counter
+    var numOfInc : Int = 0
+    func increaseCounter(_ counter : Int)->Int{
+        numOfInc += 1
+        if numOfInc > 3 {
+            return counter + numOfInc
+        }
+       return counter + 1
     }
 }
 class ViewModel  : ObservableObject {
     @Published var model : Model = Model()
+    @Published var counter : Int = 0//This needs to be in VM in order to be visable.
     func increaseCounter(){
-        model.increaseCounter()
-    }
-//    func getText()-> String{
-//        return "\(model.getNum())"
-//    }
-    var counterText : String {
-        "\(model.counter)"
+        counter = model.increaseCounter(counter)
     }
 }
 
@@ -48,10 +44,9 @@ struct SimpleView: View {
     @StateObject var vm : ViewModel = ViewModel()
     var body: some View {
         VStack {
-            Text("Counter : \(vm.counterText)")
-            Button("Test \(vm.counterText)"){
+            Text("Counter : \(vm.counter)")
+            Button("Test \(vm.counter)"){
                 vm.increaseCounter()
-                
             }
         }
     }
